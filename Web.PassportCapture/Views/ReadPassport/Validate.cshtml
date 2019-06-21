@@ -1,0 +1,64 @@
+﻿@model ValidationResultViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div class=" row h-100 justify-content-center align-content-center bg-light">
+    <div class="">
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Validation method performed</th>
+                        <th scope="col">Result</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td ><label asp-for="PassportNumberChecksumValid"></label></td>
+                        <td > @Model.Outcome(Model.PassportNumberChecksumValid)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="DOBChecksumValid"></label></td>
+                        <td>@Model.Outcome(Model.DOBChecksumValid)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="ExpirationChecksumValid"></label></td>
+                        <td>@Model.Outcome(Model.ExpirationChecksumValid)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="PersonalNumberChecksumValid"></label></td>
+                        <td>@Model.Outcome(Model.PersonalNumberChecksumValid)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="FinalChecksumValid"></label></td>
+                        <td>@Model.Outcome(Model.FinalChecksumValid)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="GenderCCValid"></label></td>
+                        <td>@Model.Outcome(Model.GenderCCValid)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="DOBCCValid"></label></td>
+                        <td>@Model.Outcome(Model.DOBCCValid)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="ExpirationDateCCValid"></label></td>
+                        <td>@Model.Outcome(Model.ExpirationDateCCValid)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="NationalityCCValid"></label></td>
+                        <td>@Model.Outcome(Model.NationalityCCValid)</td>
+                    </tr>
+                    <tr>
+                        <td><label asp-for="PassportNoCCValid"></label></td>
+                        <td>@Model.Outcome(Model.PassportNoCCValid)</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
